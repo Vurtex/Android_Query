@@ -1,0 +1,69 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* README.md
+* auth-lib/
+* auth-lib/signpost-commonshttp4-1.2.1.1.jar
+* auth-lib/signpost-core-1.2.1.1.jar
+* auth/
+* auth/com/
+* auth/com/androidquery/
+* auth/com/androidquery/WebDialog.java
+* auth/com/androidquery/auth/
+* auth/com/androidquery/auth/BasicHandle.java
+* auth/com/androidquery/auth/FacebookHandle.java
+* auth/com/androidquery/auth/TwitterHandle.java
+* beta/
+* beta/.DS_Store
+* beta/com/
+* beta/com/.DS_Store
+* beta/com/androidquery/
+* beta/com/androidquery/.DS_Store
+* beta/com/androidquery/callback/
+* beta/com/androidquery/callback/LocationAjaxCallback.java
+* build.xml
+* dist/
+* dist/build-auth.jardesc
+* dist/build-auth.xml
+* dist/build-full.jardesc
+* dist/build.jardesc
+* dist/build.xml
+* dist/proguard.cfg
+* dist/proguard.jar
+* img/
+* img/After.png
+* img/Before.png
+* pom.xml
+* proguard.cfg
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+* src/com/androidquery/util/web_image.html => app/src/main/resources/com/androidquery/util/web_image.html
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
