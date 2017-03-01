@@ -1,8 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-
 android {
-    compileSdkVersion 7
+    compileSdkVersion 21
     buildToolsVersion "25.0.2"
 
     defaultConfig {
@@ -16,4 +15,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+}
+
+dependencies {
 }

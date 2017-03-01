@@ -16,33 +16,23 @@
 
 package com.androidquery.callback;
 
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.lang.ref.Reference;
-import java.lang.ref.WeakReference;
-import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
-import java.net.Proxy;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.zip.GZIPInputStream;
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.util.Xml;
+import android.view.View;
+
+import com.androidquery.AQuery;
+import com.androidquery.auth.AccountHandle;
+import com.androidquery.util.AQUtility;
+import com.androidquery.util.Common;
+import com.androidquery.util.Constants;
+import com.androidquery.util.PredefinedBAOS;
+import com.androidquery.util.Progress;
+import com.androidquery.util.XmlDom;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -86,24 +76,33 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.xmlpull.v1.XmlPullParser;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.util.Xml;
-import android.view.View;
-
-import com.androidquery.AQuery;
-import com.androidquery.auth.AccountHandle;
-import com.androidquery.auth.GoogleHandle;
-import com.androidquery.util.AQUtility;
-import com.androidquery.util.Common;
-import com.androidquery.util.Constants;
-import com.androidquery.util.PredefinedBAOS;
-import com.androidquery.util.Progress;
-import com.androidquery.util.XmlDom;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.lang.ref.Reference;
+import java.lang.ref.WeakReference;
+import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.zip.GZIPInputStream;
 
 /**
  * The core class of ajax callback handler.
@@ -1898,25 +1897,7 @@ public abstract class AbstractAjaxCallback<T, K> implements Runnable{
 		
 		
 	}
-	
-	
-	/**
-	 * Set the authentication type of this request. This method requires API 5+.
-	 *
-	 * @param act the current activity
-	 * @param type the auth type
-	 * @param account the account, such as someone@gmail.com
-	 * @return self
-	 */
-	public K auth(Activity act, String type, String account){
-		
-		if(android.os.Build.VERSION.SDK_INT >= 5 && type.startsWith("g.")){		
-			ah = new GoogleHandle(act, type, account);
-		}
-		
-		return self();
-		
-	}
+
 	
 	/**
 	 * Set the authentication account handle.

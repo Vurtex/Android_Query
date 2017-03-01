@@ -8,3 +8,21 @@
 .gradle/2.14.1/taskArtifacts/cache.properties.lock
 
 *.xml
+
+*.class
+
+*.ap_
+
+*.aar
+
+*.ap_
+
+app/build/intermediates/res/resources-debug-androidTest.ap_
+
+app/build/intermediates/incremental-safeguard/debug/tag.txt
+
+app/build/generated/source/buildConfig/androidTest/debug/com/androidquery/test/BuildConfig.java
+
+*.java
+
+*.gradle
